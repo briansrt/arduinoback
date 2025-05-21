@@ -3,18 +3,13 @@
   "builds": [
     {
       "src": "src/server/index.js",
-      "dest": "dist/server.js",
-      "use": "@vercel/static"
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/api/router.js"
-    },
-    {
-      "src": "/.*",
-      "dest": "/index.html"
+      "dest": "/src/server/index.js"
     }
   ]
 }
